@@ -56,7 +56,7 @@
 
 # uses raw instead of module as python might not be installed yet
 - name: update apt repositories
-  raw: apt-get --allow-releaseinfo-change update
+  raw: apt-get -y --allow-releaseinfo-change update
 
 # uses raw instead of module as python might not be installed yet
 - name: install python on remote host
