@@ -54,13 +54,13 @@
     timeout: 180
   delegate_to: localhost
 
-# # uses raw instead of module as python might not be installed yet
-# - name: update apt repositories
-#   raw: apt-get -y --allow-releaseinfo-change update
+# uses raw instead of module as python might not be installed yet
+- name: update apt repositories
+  raw: "sleep 10; apt-get -y --allow-releaseinfo-change update"
 
-# # uses raw instead of module as python might not be installed yet
-# - name: install python on remote host
-#   raw: apt-get install python -y
+# uses raw instead of module as python might not be installed yet
+- name: install python on remote host
+  raw: apt-get install python -y
 
 - name: generate hostcode
   set_fact:
