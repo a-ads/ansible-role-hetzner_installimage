@@ -60,7 +60,7 @@
 
 # uses raw instead of module as python might not be installed yet
 - name: install python on remote host
-  raw: apt-get install python -y
+  raw: apt-get install python3 -y
 
 - name: generate hostcode
   set_fact:
